@@ -1,0 +1,21 @@
+========= HEADER AND NAV =========
+.nav__logo
+Bhavya
+
+.nav__link
+Home -> Works -> My services -> Skills -> Contact me
+
+
+========= HOME SECTION =========
+.home__subtitle
+Hi! I am Bhavya - an aspiring developer
+
+.home__title
+Creative designer and <br>
+<span id = "home-typed">Web Developer</span>
+
+.home__description
+I build designs and websites that solve problelms, inspiring success.
+
+.home__text
+EXPLORE -> MORE -> LET'S GO!
