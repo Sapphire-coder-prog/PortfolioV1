@@ -1,8 +1,6 @@
 # PortfolioV1
 # Bhavya Bhardwari — Portfolio
 
-![Portfolio preview](assets/images/preview.png)
-
 A single-page personal portfolio built from scratch with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Designed to bring together my work across writing, technical projects, and community building into one cohesive site.
 
 **Live site:** [https://sapphire-coder-prog.github.io/PortfolioV1/](https://sapphire-coder-prog.github.io/PortfolioV1/)
