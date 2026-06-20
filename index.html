@@ -3,18 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bhavya Bhardwari - Writer, Builder, Community Founder</title>
+    <meta name="description" content="Portfolio of Bhavya Bhardwari - Writer of 100 Margins, Founder of BEAN, building various projects in frontend like Lumis and Coincide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+
 </head>
-<body>
-    <header class="header" id="header">
-         <nav class="nav.container">
-            <a href="/index.html" class="nav__logo">Logo</a>
-            <ul class="nav.menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+<body class="theme-light">
+    <!-- ========= NAVIGATION BAR ========= -->
+     <header class="site-header">
+        <nav class="navbar">
+            <a href="#" class="logo">BB</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class ="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#building">Building</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
-         </nav>
-</body>
-</html>
+        </nav>
+     </header>
+     <main>
+            <!-- ========= HERO SECTION ========= -->
+            <section id="hero" class="hero fade-in theme-dark">
+                <canvas class="dot-grid"></canvas>
+                <p class="hero-eyebrow"> Hi, I'm Bhavya.</p>
+                <h1 class="hero-headline">
+                    I write, build, and foster communities around technology.
+                </h1>
+                <p class="hero-sub">A multipotentialite currently studying Math and Computing and Data Science, writing a 100-day public essay series, and learning to build for the web, one project at a time.</p>
+                <div class="hero-actions">
+                    <a href="https://substack.com/@a100margins" class="btn btn-primary"> Read the essays</a>
+                    <a href="https://www.linkedin.com/in/bhavya-bhardwari-35a480387/ "class="btn btn-secondary">Let's Connect!</a>
+                </div>
+            </section>
+
+            <div class="divider" aria-hidden="true">---</div>
+            <!-- ========= ABOUT SECTION ========= -->
+             <section id="about" class="about fade-in theme-light">
+                <canvas class="dot-grid"></canvas>
+                <h2 class="section-heading">Who's Bhavya?</h2>
+                <div class="about-content">
+                    <p>I'm an undergraduate student pursuing a dual degree - B.Tech in Mathematics and Computing Engineering at IGDTUW (2025-2029), and a BS in Data Science & Applications at IIT Madras. Along with two others, I founded <strong>BEAN</strong>, a 160+ member engineering student community which strives to help students navigate their tech career with ease. I'm also an aspiring frontend developer, making small contributions through small projects like Lumis and Coincide.</p>
+                    <p>I have spent last few months publishing <strong>100 Days to the Margins of a Notebook</strong>, a daily essay project series, and teaching myself frontend development - HTML, CSS, JS at first.Followed by React, Node.js. I like building things that didn't exist before I started. Whether that's a community, an essay, or a piece of software. Apart from this, I enjoy exploring new technologies and concepts. I also like to play with data and explore various data visualization techniques.</p>
+                </div>
+             </section>
+
+             <div class="divider" aria-hidden="true">---</div>
+              <!-- ========= BUILDING SECTION ========= -->
+              <section id="building" class="building fade-in theme-dark">
+                <canvas class="dot-grid"></canvas>
+                <h2 class="section-heading">Building</h2>
+                <div class="project-grid fade-in-stagger">
+                    <article class="project-card">
+                        <h3 class="project-title">Lumis</h3>
+                        <p class="project-desc">A personalised AI academic agent designed to help students to learn and manage their learning effectively.</p>
+                        <p class="project-role">Frontend Developer</p>
+                        <a href="https://orbitlearn-seven.vercel.app/" class="project-link">View Project</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 class="project-title">Coincide</h3>
+                        <p class="project-desc">A payment tracking app envisioned to be built especially for hostellers to manage their expenses better.</p>
+                        <p class="project-role">UI/UX Designer</p>
+                        <a href="https://www.figma.com/design/DNLGoxwNhIx9w0cA9Q5vF2/COINCIDE-finibyte-?node-id=13-230&t=Qfpn13KZwpH4neSu-1" class="project-link">View Project</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 class="project-title">BEAN</h3>
+                        <p class="project-desc">An engineering student community with 160+ members, focused on helping engineer students upskill themselves in technical domains.</p>
+                        <p class="project-role">Co-founder</p>
+                        <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FHggAZnAT7dC42ovg7c6UO4%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnupyF_mrdAxu4G3y9xlkan5SwY3t4BaR_0NayG2IXKrCMw-ypxeHd149Zr8Y_aem_cynB3mua47l3ZLLbB58lKg&e=AUBSdsQ322Bwo3EdgZlA50wAZCVqOFpwn_rnzuGv1opiyqrUbRu6Hb0MYXK3rjwd6a2TWZJKii6sxkVald-GCYL7vZMHgvm81N6sFIBBXfuR4D7dj43720HLBH5s7_7eoMBfpcc" class="project link">View Community</a>
+                    </article>
+                </div>
+            </section>
+
+                <div class="divider" aria-hidden="true">---</div>
+
+                <!-- ========= WRITING SECTION ========= -->
+                <section id="writing" class="writing fade-in theme-light">
+                    <canvas class="dot-grid"></canvas>
+                    <h2 class="section-heading">Writing - 100 Days to the Margins of a Notebook</h2>
+                    <p class="section-sub">A 100-day public writing project. One essay a day, written in the margins of everything going on.
+
+                    </p>
+                    <div class="essay-grid fade-in-stagger">
+
+                        <article class="essay-card">
+                            <span class="essay-day">Day 3</span>
+                            <h3 class="essay-title">Things I believed at 15 that I don't anymore</h3>
+                            <p class="essay-excerpt">Fifteen is the last year you can claim childhood as an excuse and the first year anyone expects you to have your things together. The vivid imagination adopted from my fourteen-year-old self won’t leave my headspace. And the blooming sweet sixteen was clearly visible in front of me with a bouquet of early adult responsibilities. And the fifteen? Fifteen was the escapism in the form of dreams that I turned back to look at today. I look back to some delusions, some broken foundational beliefs, some aspirations, some dreams, and a wish list and of course, a journal....</p>
+                            <a href="https://substack.com/@a100margins/p-188400529" class="essay-link">Read on Substack</a>
+                        </article>
+
+                        <article class="essay-card">
+                            <span class="essay-day">Day 27</span>
+                            <h3 class="essay-title">How to set boundaries without feeling mean</h3>
+                            <p class="essay-excerpt">This is for the girls who apologize when someone bumps into them. Who say yes when they mean no. Who feel guilty for taking up space.<br>You’ve been taught that boundaries are selfish. That good girls don’t say no. That keeping the peace means swallowing your discomfort.<br>I’m here to tell you: that’s a lie.<br>And it’s costing you more than you realize.My mother told me something abruptly one day. She said the things I was calling her out for would be the things I’d do myself in the future.<br>I was calling her out for always sacrificing herself in the name of family. For giving her “best” hoping for recognition from the elders, only to hear “this is what you’re supposed to do.”<br>She was teaching me that I’d do the same. “For the family’s sake.”<br>The moment those words left her mouth, I whispered to myself: No. I won’t live like this....</p>
+                            <a href="https://substack.com/home/post/p-190947015" class="essay-link">Read on Substack</a>
+                        </article>
+
+                        <article class="essay-card">
+                            <span class="essay-day">Day 74 </span>
+                            <h3 class="essay-title">The times I lose myself</h3>
+                            <p class="essay-excerpt">I sometimes can’t recognise myself.<br>Not in the dramatic, cinematic way. Not the movie scene where someone looks in the mirror and doesn’t know the face looking back. Quieter than that. More ordinary. Just a moment, sometimes in the middle of a completely normal day, where I am suddenly a stranger inside my own brain. Where the hand at the end of my arm feels like it belongs to someone I haven’t been introduced to yet. Where the room I am sitting in, the same room I have sat in a hundred times, looks slightly off. Like a photograph of itself rather than the actual thing.<br>I don’t know what to call it. I am calling it losing myself, for now, because that is the closest I can get....</p>
+                            <a href="https://substack.com/home/post/p-199217534" class="essay-link">Read on Substack</a>
+                        </article>
+
+                        <article class="essay-card">
+                            <span class="essay-day">Day 73 </span>
+                            <h3 class="essay-title">Sometimes hate is all I have</h3>
+                            <p class="essay-excerpt">Hate the ones I love. Hate the ones I admire. Hate the ones I was head over heels for yesterday, praying to the day before, spending on like money didn’t matter if it was that person I was spending on. And no, it is not always the monthly hormonal imbalance, before anyone goes there. It is something more. Something unwrapped that I haven’t figured out yet....</p>
+                            <a href="https://substack.com/@a100margins/p-198874255" class="essay-link">Read on Substack</a>
+                        </article>
+
+                    </div>
+                    <a href="https://substack.com/@a100margins" class="btn btn-secondary">Read all essays on Substack</a>
+                </section>
+                <div class="divider" aria-hidden="true"></div>
+
+                 <!-- ========= TECH SECTION ========= -->
+                 <section id="tech" class="tech fade-in theme-dark">
+                    <canvas class="dot-grid"></canvas>
+                    <h2 class="section-heading">Tech Interests</h2>
+                    <div class="tech-content">
+                        <div class="tech-group">
+                            <h3 class="tech-group-title">Comfortable with</h3>
+                            <ul class="tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Tailwind CSS</li>
+                                <li>Figma</li>
+                                <li>Git and GitHub</li>
+                                <li>Matlab</li>
+                                <li>Python</li>
+                                <li>MySql</li>
+                                <li>R programming</li>
+                            </ul>
+                        </div>
+                        <div class="tech-group">
+                            <h3 class="tech-group-title">Currently Exploring</h3>
+                            <ul class="tech-list">
+                                <li>Frontend Development (React, Next.js, Tailwind CSS)</li>
+                                <li>Java</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <a href="https://github.com/Sapphire-coder-prog" class="btn btn-secondary">View GitHub</a>
+                    </section>
+                    <div class="divider" aria-hidden="true"></div>
+                    <!-- ========= COMMUNITY SECTION ========= -->
+                     <section id="community" class="community fade-in theme-light">
+                        <canvas class="dot-grid"></canvas>
+                        <h2 class="section-heading">Community Building</h2>
+                        <div class="community-content">
+                            <div class="community-item">
+                                <h3 class="community-title">BEAN</h3>
+                                <p class="community-desc">I co-founded BEAN, an engineering student community with 160+ members, focused on helping engineer students upskill themselves in technical domains.Currently running an 8 weeks build sprint to level up registered members tech skills this summer. We have a lot of exciting projects and events lined up for the upcoming months, so stay tuned!</p>
+                            </div>
+                        </div>
+                        <p class="community-cta">If you're an engineering student looking to upskill yourself in tech, or just someone interested in being a part of a vibrant community of builders, do join us!
+                        </p>
+                        <a href="#" class="btn btn-secondary">Join BEAN</a>
+
+                    </section>
+                    
+                <div class="divider" aria-hidden="true"></div>
+                <!-- ========= CONTACT SECTION ========= -->
+                <section id="contact" class="contact fade-in theme-dark">
+                    <canvas class="dot-grid"></canvas>
+                    <h2 class="section-heading">Let's Connect!</h2>
+                    <p class="contact-sub">I'm always open to connecting with like-minded individuals, fellow builders, and those interested in my work. Feel free to reach out to me through any of the platforms below.</p>
+                    <div class="contact-links">
+                        <a href="mailto:bhavyabhardwari@gmail.com" class="contact-link">bhavyabhardwari@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/bhavya-bhardwari/" class="contact-link">LinkedIn</a>
+                        <a href="https://github.com/Sapphire-coder-prog" class="contact-link">GitHub</a>
+                        <a href="https://substack.com/@a100margins" class="contact-link">Substack</a>
+                        
+                    </div>
+                </section>
+                </main>
+             
+                <footer class="site-footer">
+                    <p>&copy; 2026 Bhavya Bhardwari. Built with HTML, CSS & JS.</p>
+                </footer>
+                <script src="js/nav.js"></script>
+                <script src="js/scroll-animations.js"></script>
+                <script src="js/dot-grid.js"></script>
+                <script src="js/main.js"></script>  
+            </body>
+        </html>
