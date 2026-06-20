@@ -1,0 +1,373 @@
+/* Base typography + layout for every section. Mobile-first: base styles are for
+   small screens, then @media min-width queries ADD complexity for bigger screens.
+   This is the opposite of designing for desktop and cramming it down to mobile,
+   and it's the approach that scales better. */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* A reusable content wrapper — every section's content sits inside one of these
+   so margins/max-width are consistent without repeating the same rule everywhere */
+.hero, .about, .building, .writing, .tech, .community, .contact {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.section-heading {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+}
+
+.section-sub {
+  color: var(--color-ink-muted);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-md);
+  max-width: 60ch; /* ch = character width — caps line length for readability, regardless of screen size */
+}
+
+/* ===== DIVIDER (your signature element — the torn-margin motif) ===== */
+.divider {
+  max-width: var(--max-width);
+  height: 1px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-border) 0px,
+    var(--color-border) 6px,
+    transparent 6px,
+    transparent 12px
+  ); /* dashed hairline instead of a solid rule — reads as "notebook margin line" not "generic <hr>" */
+}
+
+/* ===== HEADER / NAV ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: none; /* hidden by default on mobile — shown via hamburger toggle */
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-links.active {
+  display: flex; /* JS toggles this class — see nav.js */
+}
+
+.nav-links a {
+  font-size: var(--fs-md);
+}
+
+.nav-cta {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Hamburger icon — three .bar spans styled as lines, animated into an X on click */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 101;
+}
+
+.nav-toggle .bar {
+  width: 24px;
+  height: 2px;
+  background: var(--color-ink);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* JS adds .active to .nav-toggle when open — these transforms turn the three bars into an X */
+.nav-toggle.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  padding-top: var(--space-xl);
+}
+
+.hero-eyebrow {
+  color: var(--color-ink-muted);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-headline {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero-sub {
+  font-size: var(--fs-md);
+  color: var(--color-ink-muted);
+  max-width: 55ch;
+  margin-bottom: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-ink);
+}
+
+.btn-secondary:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+/* ===== ABOUT ===== */
+.about-content p {
+  margin-bottom: var(--space-sm);
+  max-width: 65ch;
+  font-size: var(--fs-md);
+}
+
+/* ===== PROJECT / ESSAY GRIDS ===== */
+.project-grid, .essay-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.project-card, .essay-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.project-title, .essay-title {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-xs);
+}
+
+.project-desc, .essay-excerpt {
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.project-role {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--color-ink-muted);
+}
+
+.essay-day {
+  font-size: var(--fs-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.project-link, .essay-link {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.project-link:hover, .essay-link:hover {
+  color: var(--color-accent);
+}
+
+/* ===== TECH ===== */
+.tech-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.tech-group-title {
+  font-size: var(--fs-base);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.tech-list li {
+  font-size: var(--fs-md);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ===== COMMUNITY ===== */
+.community-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.community-title {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-xs);
+}
+
+.community-desc {
+  color: var(--color-ink-muted);
+}
+
+/* ===== CONTACT ===== */
+.contact-sub {
+  color: var(--color-ink-muted);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-md);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-link {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: var(--space-md);
+  color: var(--color-ink-muted);
+  font-size: var(--fs-sm);
+}
+
+/* ===== RESPONSIVE — desktop breakpoint ===== */
+@media (min-width: 768px) {
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .essay-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tech-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .community-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+/* Sections containing a dot-grid canvas need relative positioning, so the
+   canvas (absolute) anchors to THIS section, not the whole page */
+.hero, .about, .building, .writing, .tech, .community, .contact {
+  position: relative;
+  overflow: hidden; /* keeps dots from spilling visually outside section edges */
+}
+
+.dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* sits behind everything else in the section */
+  pointer-events: none; /* lets clicks/hovers pass through to your actual content underneath */
+}
+
+/* Your real content needs to sit ABOVE the canvas — give direct children a z-index */
+.hero > *:not(.dot-grid),
+.about > *:not(.dot-grid),
+.building > *:not(.dot-grid),
+.writing > *:not(.dot-grid),
+.tech > *:not(.dot-grid),
+.community > *:not(.dot-grid),
+.contact > *:not(.dot-grid) {
+  position: relative;
+  z-index: 1;
+}

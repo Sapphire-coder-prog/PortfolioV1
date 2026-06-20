@@ -1,0 +1,41 @@
+/* This is a CSS reset file to ensure consistent styling across different browsers. It removes default margins, paddings, and other styles that browsers apply to elements by default. */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialised;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    background:none;
+}
+
+h1,h2,h3,h4,p {
+    overflow-wrap: break-word;
+}

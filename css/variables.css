@@ -1,0 +1,54 @@
+:root {
+  /* ===== BASE COLORS (used directly, unchanged) ===== */
+  --color-accent: #C4392A;
+  --color-border-light: #E0DCD3;
+  --color-border-dark: #2A2A2A;
+
+  /* ===== TYPE ===== */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 2rem;
+  --fs-xl: 3.5rem;
+
+  /* ===== SPACING ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* ===== LAYOUT ===== */
+  --max-width: 1100px;
+  --radius: 4px;
+
+  /* ===== MOTION ===== */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.2s var(--ease);
+  --transition-slow: 0.8s var(--ease);
+}
+
+/* ===== LIGHT THEME (default — applies to body and any section without .theme-dark) ===== */
+.theme-light {
+  --color-bg: #FAF8F3;       /* cream */
+  --color-bg-alt: #FFFFFF;
+  --color-ink: #0A0A0A;
+  --color-ink-muted: #6B6358;
+  --color-border: var(--color-border-light);
+  --color-dot: rgba(10, 10, 10, 0.15);       /* faint black dots on light bg */
+  --color-dot-active: rgba(196, 57, 42, 0.6); /* dots brighten toward accent near cursor */
+}
+
+/* ===== DARK THEME (applied via .theme-dark on alternating sections) ===== */
+.theme-dark {
+  --color-bg: #0A0A0A;
+  --color-bg-alt: #1A1A1A;
+  --color-ink: #FAF8F3;
+  --color-ink-muted: #9A958C;
+  --color-border: var(--color-border-dark);
+  --color-dot: rgba(250, 248, 243, 0.15);     /* faint white dots on dark bg */
+  --color-dot-active: rgba(196, 57, 42, 0.8);
+}
